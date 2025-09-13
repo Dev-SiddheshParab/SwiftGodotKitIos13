@@ -7,7 +7,7 @@ let package = Package(
     name: "SwiftGodotKit",
     platforms: [
         .macOS(.v14),
-        .iOS(.v17)
+        .iOS(.v13)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
