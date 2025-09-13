@@ -18,7 +18,7 @@ let package = Package(
     ],
     dependencies: [
         // The revision below points to my SwiftGodot on the "main" branch after release 0.60.1
-        .package(url: "https://github.com/migueldeicaza/SwiftGodot", revision: "20d2d7a35d2ad392ec556219ea004da14ab7c1d4")
+        .package(url: "https://github.com/suhailp-eccentric/SwiftGodotIos13", branch: "ios13")
 
         // Use this one to develop locally
         //.package(path: "../SwiftGodot"),
@@ -29,7 +29,7 @@ let package = Package(
         .target(
             name: "SwiftGodotKit",
             dependencies: [
-                "SwiftGodot",
+                .product(name: "SwiftGodot", package: "swiftgodotios13"),
                 .target(name: "mac_libgodot", condition: .when(platforms: [.macOS])),
                 .target(name: "ios_libgodot", condition: .when(platforms: [.iOS])),
                 .target(name: "MoltenVK", condition: .when(platforms: [.iOS])),
